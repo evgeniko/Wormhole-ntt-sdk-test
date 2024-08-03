@@ -6,14 +6,14 @@ export type NttContracts = {
 };
 
 export const TEST_NTT_SPL22_TOKENS: NttContracts = {
-  Sepolia: {
+  Solana: {
     token: "GCzVVsjMjkg8EpoidnFW9bqegwhbp1GWGpzuSfhH6fyB",
     manager: "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
     transceiver: {
       wormhole: "AQmPbngJJHmKcC482pVshfLeS3KP4iK5q863a2DhH992",
     },
   },
-  Solana: {
+  Sepolia: {
     token: "0xF7cbc69c6259Cf06582EEDF9477D58a15Dc5332e",
     manager: "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD",
     transceiver: { wormhole: "0xf5D15B2F36A34918bD18C9D1382B98B9C22a7d3e" },

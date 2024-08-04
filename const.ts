@@ -10,7 +10,7 @@ export const TEST_NTT_SPL22_TOKENS: NttContracts = {
     token: "GCzVVsjMjkg8EpoidnFW9bqegwhbp1GWGpzuSfhH6fyB",
     manager: "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
     transceiver: {
-      wormhole: "AQmPbngJJHmKcC482pVshfLeS3KP4iK5q863a2DhH992",
+      wormhole: "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
     },
   },
   Sepolia: {

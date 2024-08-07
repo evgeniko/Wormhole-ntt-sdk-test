@@ -19,10 +19,10 @@ import {
   }
   
   const DEVNET_SOL_PRIVATE_KEY = encoding.b58.encode(
-    new Uint8Array([
-      14, 173, 153, 4, 176,
-      // .. rest of the private key
-    ])
+    new Uint8Array(
+      [229,95 //.. rest of the key
+        ]
+      )
   );
   const DEVNET_ETH_PRIVATE_KEY =
     "0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"; // Ganache default private key

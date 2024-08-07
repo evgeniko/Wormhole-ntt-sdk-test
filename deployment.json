@@ -1,47 +1,47 @@
 {
-    "network": "Testnet",
-    "chains": {
-      "Solana": {
-        "version": "2.0.0",
-        "mode": "burning",
-        "paused": false,
-        "owner": "WYYQskzrPRvpMGVenmzneVweG5dLhz2oBbz8dKmohvA",
-        "manager": "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
-        "token": "GCzVVsjMjkg8EpoidnFW9bqegwhbp1GWGpzuSfhH6fyB",
-        "transceivers": {
-          "threshold": 1,
-          "wormhole": {
-            "address": "AQmPbngJJHmKcC482pVshfLeS3KP4iK5q863a2DhH992"
-          }
-        },
-        "limits": {
-          "outbound": "0.100000000",
-          "inbound": {
-            "Sepolia": "0.000000000"
-          }
+  "network": "Testnet",
+  "chains": {
+    "BaseSepolia": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88",
+      "manager": "0x75e16657906a012EC8674fE29b36e60cDe21ec79",
+      "token": "0xd67a9c292e0cc48fDb48D63F11dFdc364201C9DE",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD",
+          "pauser": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88"
         }
       },
-      "Sepolia": {
-        "version": "1.1.0",
-        "mode": "burning",
-        "paused": false,
-        "owner": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88",
-        "manager": "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD",
-        "token": "0xF7cbc69c6259Cf06582EEDF9477D58a15Dc5332e",
-        "transceivers": {
-          "threshold": 1,
-          "wormhole": {
-            "address": "0xf5D15B2F36A34918bD18C9D1382B98B9C22a7d3e",
-            "pauser": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88"
-          }
-        },
-        "limits": {
-          "outbound": "184467440737.095516150000000000",
-          "inbound": {
-            "Solana": "0.000000000000000000"
-          }
-        },
-        "pauser": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88"
+      "limits": {
+        "outbound": "184467440737.095516150000000000",
+        "inbound": {
+          "Solana": "1000.000000000000000000"
+        }
+      },
+      "pauser": "0xCC0D31E242A2E18Ed3f2Fb16C45C87B4187e8F88"
+    },
+    "Solana": {
+      "version": "2.0.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "wfw6pVqnvwEPG6DwdjkjFXwX4yLpvYWvK8hXAPSmhtW",
+      "manager": "NTueGPu3ckEwiQXprSjAfHC7YybrJNAG39X2AKEG9So",
+      "token": "3ghtYBVKSACZ87sLufSVT19B5J66dcC6uxb9WUmAYPbH",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "DEpwRWUzcRWiKQpSaNZGgrukNTuy4hJXLHMhRxpV8RdD"
+        }
+      },
+      "limits": {
+        "outbound": "1000.100000000",
+        "inbound": {
+          "BaseSepolia": "1000.000000000"
+        }
       }
     }
   }
+}

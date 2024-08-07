@@ -5,19 +5,20 @@ export type NttContracts = {
   [key in Chain]?: Ntt.Contracts;
 };
 
+
 export const TEST_NTT_SPL22_TOKENS: NttContracts = {
   Solana: {
-    token: "GCzVVsjMjkg8EpoidnFW9bqegwhbp1GWGpzuSfhH6fyB",
-    manager: "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
+    token: "3ghtYBVKSACZ87sLufSVT19B5J66dcC6uxb9WUmAYPbH",
+  // TODO: manager & transceiver the same for Solana, but different for BaseSepolia?
+    manager: "NTueGPu3ckEwiQXprSjAfHC7YybrJNAG39X2AKEG9So",
     transceiver: {
-      wormhole: "NTttPKktsauausafEimYigoDKfb193P94L3Vyff6LvV",
+      wormhole: "NTueGPu3ckEwiQXprSjAfHC7YybrJNAG39X2AKEG9So",
     },
   },
-  Sepolia: {
-    token: "0xF7cbc69c6259Cf06582EEDF9477D58a15Dc5332e",
-    manager: "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD",
-    transceiver: { wormhole: "0xf5D15B2F36A34918bD18C9D1382B98B9C22a7d3e" },
-    // quoter: "Nqd6XqA8LbsCuG8MLWWuP865NV6jR1MbXeKxD4HLKDJ",
+  BaseSepolia: {
+    token: "0xd67a9c292e0cc48fDb48D63F11dFdc364201C9DE",
+    manager: "0x75e16657906a012EC8674fE29b36e60cDe21ec79",
+    transceiver: { wormhole: "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD" },
   },
 };
 

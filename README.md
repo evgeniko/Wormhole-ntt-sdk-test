@@ -1,9 +1,9 @@
 
-# NTT deployment testing with Wormhole SDK
+# NTT deployment testing with Wormhole TS-SDK
 
 ## Overview
 
-This project demonstrates the use of the Wormhole SDK to facilitate token transfers between different blockchain networks, after performing a deployment of the [Native Token Transfer](https://docs.wormhole.com/wormhole/native-token-transfers/overview) framework. Before running the script, you need to set up the necessary configurations and provide your deployment details.
+This project demonstrates the use of the Wormhole TS-SDK to facilitate token transfers between different blockchain networks, after performing a deployment of the [Native Token Transfer](https://docs.wormhole.com/wormhole/native-token-transfers/overview) framework. Before running the script, you need to set up the necessary configurations and provide your deployment details.
 
 ## Prerequisites
 

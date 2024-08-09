@@ -10,15 +10,9 @@ import {
   // register protocol implementations
   import "@wormhole-foundation/sdk-evm-ntt";
   import "@wormhole-foundation/sdk-solana-ntt";
-import { TEST_NTT_SPL22_TOKENS } from "./const";
+import { TEST_NTT_TOKENS } from "./const";
 import { getSigner } from "./helpers";
-  
-  
-  // EVM 1.0.0, Solana 1.0.0
-//   const TOKEN_CONTRACTS = TEST_NTT_SPL22_TOKENS;
-  // EVM 1.0.0 Solana 2.0.0
-  const TOKEN_CONTRACTS = TEST_NTT_SPL22_TOKENS;
-  
+    
   (async function () {
     const wh = new Wormhole("Testnet", [solana.Platform, evm.Platform]);
     const src = wh.getChain("BaseSepolia");
@@ -28,10 +22,10 @@ import { getSigner } from "./helpers";
     const dstSigner = await getSigner(dst);
   
     const srcNtt = await src.getProtocol("Ntt", {
-      ntt: TOKEN_CONTRACTS[src.chain],
+      ntt: TEST_NTT_TOKENS[src.chain],
     });
     const dstNtt = await dst.getProtocol("Ntt", {
-      ntt: TOKEN_CONTRACTS[dst.chain],
+      ntt: TEST_NTT_TOKENS[dst.chain],
     });
   
     const amt = amount.units(

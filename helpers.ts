@@ -11,7 +11,7 @@ import {
   
   import evm from "@wormhole-foundation/sdk/platforms/evm";
   import solana from "@wormhole-foundation/sdk/platforms/solana";
-import { NttContracts, TEST_NTT_SPL22_TOKENS, DEVNET_SOL_PRIVATE_KEY, DEVNET_ETH_PRIVATE_KEY} from "./const";
+import { NttContracts, DEVNET_SOL_PRIVATE_KEY, DEVNET_ETH_PRIVATE_KEY, TEST_NTT_TOKENS} from "./const";
 import { NttRoute } from "@wormhole-foundation/sdk-route-ntt";
   
   export interface SignerStuff<N extends Network, C extends Chain> {
@@ -72,7 +72,7 @@ import { NttRoute } from "@wormhole-foundation/sdk-route-ntt";
 
   // Reformat NTT contracts to fit TokenConfig for Route
 function reformat(contracts: NttContracts) {
-  return Object.entries(TEST_NTT_SPL22_TOKENS).map(([chain, contracts]) => {
+  return Object.entries(TEST_NTT_TOKENS).map(([chain, contracts]) => {
     const { token, manager, transceiver: xcvrs } = contracts!;
     const transceiver = Object.entries(xcvrs).map(([k, v]) => {
       return { type: k as NttRoute.TransceiverType, address: v };
@@ -82,5 +82,5 @@ function reformat(contracts: NttContracts) {
 }
 
 export const NttTokens = {
-  Test: reformat(TEST_NTT_SPL22_TOKENS),
+  Test: reformat(TEST_NTT_TOKENS),
 };

@@ -6,26 +6,19 @@ import {
     Signer,
     Wormhole,
     chainToPlatform,
-    encoding,
+    
   } from "@wormhole-foundation/sdk";
   
   import evm from "@wormhole-foundation/sdk/platforms/evm";
   import solana from "@wormhole-foundation/sdk/platforms/solana";
+import { NttContracts, TEST_NTT_SPL22_TOKENS, DEVNET_SOL_PRIVATE_KEY, DEVNET_ETH_PRIVATE_KEY} from "./const";
+import { NttRoute } from "@wormhole-foundation/sdk-route-ntt";
   
   export interface SignerStuff<N extends Network, C extends Chain> {
     chain: ChainContext<N, C>;
     signer: Signer<N, C>;
     address: ChainAddress<C>;
   }
-  
-  const DEVNET_SOL_PRIVATE_KEY = encoding.b58.encode(
-    new Uint8Array(
-      [229,95 //.. rest of the key
-        ]
-      )
-  );
-  const DEVNET_ETH_PRIVATE_KEY =
-    "0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"; // Ganache default private key
   
   export async function getSigner<N extends Network, C extends Chain>(
     chain: ChainContext<N, C>
@@ -76,3 +69,18 @@ import {
   
     return val;
   }
+
+  // Reformat NTT contracts to fit TokenConfig for Route
+function reformat(contracts: NttContracts) {
+  return Object.entries(TEST_NTT_SPL22_TOKENS).map(([chain, contracts]) => {
+    const { token, manager, transceiver: xcvrs } = contracts!;
+    const transceiver = Object.entries(xcvrs).map(([k, v]) => {
+      return { type: k as NttRoute.TransceiverType, address: v };
+    });
+    return { chain: chain as Chain, token, manager, transceiver };
+  });
+}
+
+export const NttTokens = {
+  Test: reformat(TEST_NTT_SPL22_TOKENS),
+};

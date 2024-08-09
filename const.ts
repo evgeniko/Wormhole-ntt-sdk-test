@@ -15,15 +15,15 @@ export const DEVNET_ETH_PRIVATE_KEY =
 
 export const TEST_NTT_SPL22_TOKENS: NttContracts = {
   Solana: {
-    token: "3ghtYBVKSACZ87sLufSVT19B5J66dcC6uxb9WUmAYPbH",
+    token: "5trJHKSB7M6w1sC74YkxZb5D7GxA9bL6WzP4ht8FDs5V",
     manager: "NTueGPu3ckEwiQXprSjAfHC7YybrJNAG39X2AKEG9So",
     transceiver: {
       wormhole: "NTueGPu3ckEwiQXprSjAfHC7YybrJNAG39X2AKEG9So",
     },
   },
   BaseSepolia: {
-    token: "0xd67a9c292e0cc48fDb48D63F11dFdc364201C9DE",
-    manager: "0x75e16657906a012EC8674fE29b36e60cDe21ec79",
-    transceiver: { wormhole: "0xeBdEFbC8111439449293A98f552a4BE57e2D5FAD" },
+    token: "0xaBc1234567890fDb48D63F11dFdc364201C9DE67",
+    manager: "0xD456789a1230Cc48fDb48D63F11dFdc364201C9DE",
+    transceiver: { wormhole: "0x9876aBcDeF01234567890Fdb48D63F11dFdc3642" },
   },
 };
